@@ -1,6 +1,7 @@
-//:host {
-//  display: block;
-//}
+:host {
+  display: block;
+  width: 100%;
+}
 
 // Please change your favorite font-size!
 $fontSize: 15rem;
@@ -9,6 +10,7 @@ $fontSize: 15rem;
 
 .myBody {
   background: rgba(10, 20, 40, 1);
+  width: 100vw;
   height: 100vh;
   overflow: hidden;
   display: flex;
@@ -22,6 +24,7 @@ div {
 }
 
 #ui {
+  width: 100%;
   transform-style: preserve-3d;
   .text {
     position: absolute;

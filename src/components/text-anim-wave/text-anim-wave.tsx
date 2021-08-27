@@ -1,4 +1,4 @@
-import { Component, Host, h } from '@stencil/core';
+import {Component, Host, h, Element} from '@stencil/core';
 
 /** https://codepen.io/YusukeNakaya/pen/EbMWgd */
 @Component({
@@ -8,7 +8,22 @@ import { Component, Host, h } from '@stencil/core';
 })
 export class TextAnimWave {
 
+  @Element() hostElement;
+
   array = Array.from(Array(26).keys())
+
+  getContent() {
+    const node = this.hostElement
+      .querySelector('slot')
+      .cloneNode(true);
+
+    console.log('getContent', node)
+
+    // const newNode = findAndReplaceInnerHtml(node, todo);
+    // const newNode2 = findAndReplaceSrc(newNode, todo);
+
+    return node.innerHTML;
+  }
 
   render() {
     return (
@@ -18,9 +33,10 @@ export class TextAnimWave {
             {
               this.array.map((_) =>
                 <div class="text">
-                  {_}
-                  <slot></slot>
+                  TEST
+                  {/*<slot></slot>*/}
                 </div>
+                // <div class="text" innerHTML={this.getContent()}></div>
               )
             }
           </div>
