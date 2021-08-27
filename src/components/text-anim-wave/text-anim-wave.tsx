@@ -12,6 +12,9 @@ export class TextAnimWave {
 
   array = Array.from(Array(26).keys())
 
+  /** https://github.com/ionic-team/stencil/issues/990
+   * https://webcomponents.dev/edit/oEPlhviSVrJMW94FinxW/src/index.tsx?sv=1
+   * */
   getContent() {
     const node = this.hostElement
       .querySelector('[slot="title"]')

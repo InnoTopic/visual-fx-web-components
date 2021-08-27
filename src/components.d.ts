@@ -26,6 +26,8 @@ export namespace Components {
     }
     interface Text3dMarquee {
     }
+    interface Text3dPaperFold {
+    }
     interface Text3dSimple {
     }
     interface TextAnimWave {
@@ -58,6 +60,12 @@ declare global {
         prototype: HTMLText3dMarqueeElement;
         new (): HTMLText3dMarqueeElement;
     };
+    interface HTMLText3dPaperFoldElement extends Components.Text3dPaperFold, HTMLStencilElement {
+    }
+    var HTMLText3dPaperFoldElement: {
+        prototype: HTMLText3dPaperFoldElement;
+        new (): HTMLText3dPaperFoldElement;
+    };
     interface HTMLText3dSimpleElement extends Components.Text3dSimple, HTMLStencilElement {
     }
     var HTMLText3dSimpleElement: {
@@ -81,6 +89,7 @@ declare global {
         "text-3d-extrude": HTMLText3dExtrudeElement;
         "text-3d-magic": HTMLText3dMagicElement;
         "text-3d-marquee": HTMLText3dMarqueeElement;
+        "text-3d-paper-fold": HTMLText3dPaperFoldElement;
         "text-3d-simple": HTMLText3dSimpleElement;
         "text-anim-wave": HTMLTextAnimWaveElement;
         "text-glow": HTMLTextGlowElement;
@@ -107,6 +116,8 @@ declare namespace LocalJSX {
     }
     interface Text3dMarquee {
     }
+    interface Text3dPaperFold {
+    }
     interface Text3dSimple {
     }
     interface TextAnimWave {
@@ -118,6 +129,7 @@ declare namespace LocalJSX {
         "text-3d-extrude": Text3dExtrude;
         "text-3d-magic": Text3dMagic;
         "text-3d-marquee": Text3dMarquee;
+        "text-3d-paper-fold": Text3dPaperFold;
         "text-3d-simple": Text3dSimple;
         "text-anim-wave": TextAnimWave;
         "text-glow": TextGlow;
@@ -131,6 +143,7 @@ declare module "@stencil/core" {
             "text-3d-extrude": LocalJSX.Text3dExtrude & JSXBase.HTMLAttributes<HTMLText3dExtrudeElement>;
             "text-3d-magic": LocalJSX.Text3dMagic & JSXBase.HTMLAttributes<HTMLText3dMagicElement>;
             "text-3d-marquee": LocalJSX.Text3dMarquee & JSXBase.HTMLAttributes<HTMLText3dMarqueeElement>;
+            "text-3d-paper-fold": LocalJSX.Text3dPaperFold & JSXBase.HTMLAttributes<HTMLText3dPaperFoldElement>;
             "text-3d-simple": LocalJSX.Text3dSimple & JSXBase.HTMLAttributes<HTMLText3dSimpleElement>;
             "text-anim-wave": LocalJSX.TextAnimWave & JSXBase.HTMLAttributes<HTMLTextAnimWaveElement>;
             "text-glow": LocalJSX.TextGlow & JSXBase.HTMLAttributes<HTMLTextGlowElement>;
