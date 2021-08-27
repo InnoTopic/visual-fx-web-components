@@ -20,6 +20,8 @@ export namespace Components {
          */
         "middle": string;
     }
+    interface Text3dMarquee {
+    }
     interface TextGlow {
     }
 }
@@ -30,6 +32,12 @@ declare global {
         prototype: HTMLMyComponentElement;
         new (): HTMLMyComponentElement;
     };
+    interface HTMLText3dMarqueeElement extends Components.Text3dMarquee, HTMLStencilElement {
+    }
+    var HTMLText3dMarqueeElement: {
+        prototype: HTMLText3dMarqueeElement;
+        new (): HTMLText3dMarqueeElement;
+    };
     interface HTMLTextGlowElement extends Components.TextGlow, HTMLStencilElement {
     }
     var HTMLTextGlowElement: {
@@ -38,6 +46,7 @@ declare global {
     };
     interface HTMLElementTagNameMap {
         "my-component": HTMLMyComponentElement;
+        "text-3d-marquee": HTMLText3dMarqueeElement;
         "text-glow": HTMLTextGlowElement;
     }
 }
@@ -56,10 +65,13 @@ declare namespace LocalJSX {
          */
         "middle"?: string;
     }
+    interface Text3dMarquee {
+    }
     interface TextGlow {
     }
     interface IntrinsicElements {
         "my-component": MyComponent;
+        "text-3d-marquee": Text3dMarquee;
         "text-glow": TextGlow;
     }
 }
@@ -68,6 +80,7 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
+            "text-3d-marquee": LocalJSX.Text3dMarquee & JSXBase.HTMLAttributes<HTMLText3dMarqueeElement>;
             "text-glow": LocalJSX.TextGlow & JSXBase.HTMLAttributes<HTMLTextGlowElement>;
         }
     }
