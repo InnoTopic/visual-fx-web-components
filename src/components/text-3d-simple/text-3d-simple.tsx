@@ -1,6 +1,6 @@
 import { Component, Host, h } from '@stencil/core';
 
-/** */
+/** https://codepen.io/cssinate/pen/jzeEdq */
 @Component({
   tag: 'text-3d-simple',
   styleUrl: 'text-3d-simple.scss',
