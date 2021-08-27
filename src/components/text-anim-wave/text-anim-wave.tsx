@@ -14,7 +14,7 @@ export class TextAnimWave {
 
   getContent() {
     const node = this.hostElement
-      .querySelector('slot')
+      .querySelector('[slot="title"]')
       .cloneNode(true);
 
     console.log('getContent', node)
@@ -32,11 +32,11 @@ export class TextAnimWave {
           <div id="ui">
             {
               this.array.map((_) =>
-                <div class="text">
-                  TEST
-                  {/*<slot></slot>*/}
-                </div>
-                // <div class="text" innerHTML={this.getContent()}></div>
+                // <div class="text">
+                //   TEST
+                //   {/*<slot></slot>*/}
+                // </div>
+                <div class="text" innerHTML={this.getContent()}></div>
               )
             }
           </div>
