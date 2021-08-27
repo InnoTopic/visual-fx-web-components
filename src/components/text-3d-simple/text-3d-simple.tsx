@@ -11,8 +11,9 @@ export class Text3dSimple {
   render() {
     return (
       <Host>
-        <div class={{'effect': true}}>
-          zzz
+        {/*style={{"color": "red"}}*/}
+        <div class={{"effect": true}} >
+          ZZZ
           <slot></slot>
         </div>
       </Host>
