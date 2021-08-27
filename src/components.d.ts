@@ -20,6 +20,8 @@ export namespace Components {
          */
         "middle": string;
     }
+    interface TextGlow {
+    }
 }
 declare global {
     interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
@@ -28,8 +30,15 @@ declare global {
         prototype: HTMLMyComponentElement;
         new (): HTMLMyComponentElement;
     };
+    interface HTMLTextGlowElement extends Components.TextGlow, HTMLStencilElement {
+    }
+    var HTMLTextGlowElement: {
+        prototype: HTMLTextGlowElement;
+        new (): HTMLTextGlowElement;
+    };
     interface HTMLElementTagNameMap {
         "my-component": HTMLMyComponentElement;
+        "text-glow": HTMLTextGlowElement;
     }
 }
 declare namespace LocalJSX {
@@ -47,8 +56,11 @@ declare namespace LocalJSX {
          */
         "middle"?: string;
     }
+    interface TextGlow {
+    }
     interface IntrinsicElements {
         "my-component": MyComponent;
+        "text-glow": TextGlow;
     }
 }
 export { LocalJSX as JSX };
@@ -56,6 +68,7 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
+            "text-glow": LocalJSX.TextGlow & JSXBase.HTMLAttributes<HTMLTextGlowElement>;
         }
     }
 }
