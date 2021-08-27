@@ -2,7 +2,7 @@ import { Component, Host, h } from '@stencil/core';
 
 @Component({
   tag: 'text-glow',
-  styleUrl: 'text-glow.css',
+  styleUrl: 'text-glow.scss',
   shadow: true,
 })
 export class TextGlow {
@@ -10,7 +10,10 @@ export class TextGlow {
   render() {
     return (
       <Host>
-        <div class='glow'>
+        aa uuu
+        <div class={{'glow': true}} >
+          {/* style='font-size: 50px' */}
+          GLOWWWW
           <slot></slot>
         </div>
       </Host>
