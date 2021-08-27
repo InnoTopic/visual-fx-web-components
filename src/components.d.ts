@@ -22,6 +22,8 @@ export namespace Components {
     }
     interface Text3dExtrude {
     }
+    interface Text3dMagic {
+    }
     interface Text3dMarquee {
     }
     interface Text3dSimple {
@@ -43,6 +45,12 @@ declare global {
     var HTMLText3dExtrudeElement: {
         prototype: HTMLText3dExtrudeElement;
         new (): HTMLText3dExtrudeElement;
+    };
+    interface HTMLText3dMagicElement extends Components.Text3dMagic, HTMLStencilElement {
+    }
+    var HTMLText3dMagicElement: {
+        prototype: HTMLText3dMagicElement;
+        new (): HTMLText3dMagicElement;
     };
     interface HTMLText3dMarqueeElement extends Components.Text3dMarquee, HTMLStencilElement {
     }
@@ -71,6 +79,7 @@ declare global {
     interface HTMLElementTagNameMap {
         "my-component": HTMLMyComponentElement;
         "text-3d-extrude": HTMLText3dExtrudeElement;
+        "text-3d-magic": HTMLText3dMagicElement;
         "text-3d-marquee": HTMLText3dMarqueeElement;
         "text-3d-simple": HTMLText3dSimpleElement;
         "text-anim-wave": HTMLTextAnimWaveElement;
@@ -94,6 +103,8 @@ declare namespace LocalJSX {
     }
     interface Text3dExtrude {
     }
+    interface Text3dMagic {
+    }
     interface Text3dMarquee {
     }
     interface Text3dSimple {
@@ -105,6 +116,7 @@ declare namespace LocalJSX {
     interface IntrinsicElements {
         "my-component": MyComponent;
         "text-3d-extrude": Text3dExtrude;
+        "text-3d-magic": Text3dMagic;
         "text-3d-marquee": Text3dMarquee;
         "text-3d-simple": Text3dSimple;
         "text-anim-wave": TextAnimWave;
@@ -117,6 +129,7 @@ declare module "@stencil/core" {
         interface IntrinsicElements {
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
             "text-3d-extrude": LocalJSX.Text3dExtrude & JSXBase.HTMLAttributes<HTMLText3dExtrudeElement>;
+            "text-3d-magic": LocalJSX.Text3dMagic & JSXBase.HTMLAttributes<HTMLText3dMagicElement>;
             "text-3d-marquee": LocalJSX.Text3dMarquee & JSXBase.HTMLAttributes<HTMLText3dMarqueeElement>;
             "text-3d-simple": LocalJSX.Text3dSimple & JSXBase.HTMLAttributes<HTMLText3dSimpleElement>;
             "text-anim-wave": LocalJSX.TextAnimWave & JSXBase.HTMLAttributes<HTMLTextAnimWaveElement>;
