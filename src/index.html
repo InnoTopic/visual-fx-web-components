@@ -9,6 +9,13 @@
     <script nomodule src="/build/visual-fx-web-components.js"></script>
   </head>
   <body>
-    <my-component first="Stencil" last="'Don't call me a framework' JS"></my-component>
+    <my-component first="Stencil" last="'Don't call me a framework a' JS">
+      slot content
+    </my-component>
+    <text-glow first="Stencil" last="'Don't call me a framework a' JS">
+      slot content <u>aaa</u>
+      <button>ZZZ</button>
+    </text-glow>
+
   </body>
 </html>

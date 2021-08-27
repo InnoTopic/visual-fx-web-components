@@ -10,7 +10,9 @@ export class TextGlow {
   render() {
     return (
       <Host>
-        <slot></slot>
+        <div class='glow'>
+          <slot></slot>
+        </div>
       </Host>
     );
   }
