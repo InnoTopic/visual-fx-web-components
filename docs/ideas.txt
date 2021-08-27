@@ -1,4 +1,7 @@
 https://freefrontend.com/css-3d-text-effects/
+https://freefrontend.com/css-text-effects/
+https://www.designyourway.net/blog/web-and-mobile-design/yes-you-can-actually-make-these-text-effects-in-css/
+
 
 Ideas for different triggers:
 -- e.g. bind scroll spy to a property, e.g. glow width

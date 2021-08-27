@@ -1,5 +1,6 @@
 import { Component, Host, h } from '@stencil/core';
 
+
 @Component({
   tag: 'text-3d-anim-extrude-rotate',
   styleUrl: 'text-3d-anim-extrude-rotate.scss',
