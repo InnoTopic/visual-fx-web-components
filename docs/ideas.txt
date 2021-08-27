@@ -1,6 +1,8 @@
 https://freefrontend.com/css-3d-text-effects/
 https://freefrontend.com/css-text-effects/
 https://www.designyourway.net/blog/web-and-mobile-design/yes-you-can-actually-make-these-text-effects-in-css/
+http://letteringjs.com/
+http://snapsvg.io/
 
 
 Ideas for different triggers:
